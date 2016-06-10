@@ -1,46 +1,33 @@
 #include <iostream>
-#include "lista.h"
+#include "nodo.h"
+#include "pila.h"
+#include "cola.h"
 
 using namespace std;
 
-int main()
-{
-	lista<int> L;
-	int op, x;
-	do
-	{
-		cout << "\n1.- Ingresar nuevo valor." << endl;
-		cout << "2.- Ingresar nuevo valor ordenadamente." << endl;
-		cout << "3.- Imprimir la lista." << endl;
-		cout << "4.- Invertir lista." << endl;
-		cout << "5.- Exit" << endl;
-		cout << "Elija una opcion" << endl;
-		cin >> op;
-		switch (op)
-		{
-			case 1:
-				cout << "Ingrese el nuevo valor de la lista" << endl;
-				cin >> x;
-				L.insertar(x);
-				break;
-			case 2:
-				cout << "Ingrese el nuevo valor de la lista" << endl;
-				cin >> x;
-				L.insertar_ordenadamente(x);
-				break;
-			case 3:
-				cout << "Los valores de la lista son:" << endl;
-				L.imprimir();
-				break;
-			case 4:
-				cout << "La lista fue invertida" << endl;
-				L.invertir();
-				break;
-			case 5:
-				cout << "Programa terminado." << endl;
-				return 0;
-		}
-	}while (true);
-	
-	return 0;
+int main() {
+    pila<int> P;
+    P.push(1);
+    P.push(2);
+    P.push(3);
+
+    P.print();
+    cout << endl;
+    P.pop();
+
+    P.print();
+
+    cout << endl;
+
+    cola<int> C;
+    C.push(1);
+    C.push(2);
+    C.push(3);
+
+    C.print();
+    cout << endl;
+    C.pop();
+
+    C.print();
+    return 0;
 }

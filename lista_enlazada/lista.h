@@ -11,7 +11,7 @@ template <class T>
 class lista {
     public:
         nodo<T> *primero;
-        nodo<T> *ultimo;
+        nodo<T> *ultimo;1
         void insertar(T x);
         void insertar_ordenadamente(T x);
         void imprimir();
